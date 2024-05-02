@@ -3,15 +3,15 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import { Search, ShoppingBasket } from "@material-ui/icons/";
 import { useStateValue } from "../../StateProvider";
-import {auth} from '../../firebase'
+//import {auth} from '../../firebase'
 function Header() {
   
   const [{ basket, user }] = useStateValue();
 
   const login = () => {
-    if(user) {
-      auth.signOut(); 
-    }
+    // if(user) {
+    //   auth.signOut(); 
+    // }
   }
 
   return (
@@ -19,7 +19,7 @@ function Header() {
       <Link to="/">
         <img
           className="header_logo"
-          src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          src="https://www.shutterstock.com/shutterstock/photos/1701993172/display_1500/stock-vector-grocery-store-logo-design-vector-template-1701993172.jpg"
         />
       </Link>
 

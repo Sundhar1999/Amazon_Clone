@@ -7,31 +7,32 @@ import Checkout from "./component/Checkout/Checkout";
 import Login from "./component/Login/Login";
 import { Fragment } from "react";
 import { useStateValue } from "./StateProvider";
-import { auth } from './firebase';
+//import { auth } from './firebase';
 
 function App() {
 
   const [{user}, dispatch] = useStateValue();
 
   useEffect(() => {
-      const unsubscribe = auth.onAuthStateChanged((authUser) => {
-        if(authUser) {
-          dispatch({
-            type: "SET_USER",
-            user: authUser
-          })
-        } else {
-          dispatch({
-            type: "SET_USER",
-            user: authUser
-          })
-        }
-      });
+      // const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      //   if(authUser) {
+      //     dispatch({
+      //       type: "SET_USER",
+      //       user: authUser
+      //     })
+      //   } else {
+      //     dispatch({
+      //       type: "SET_USER",
+      //       user: authUser
+      //     })
+      //   }
+      // });
 
-      return () => {
-        unsubscribe();
-      }
-  }, [])
+      // return () => {
+      //   unsubscribe();
+      // }
+  })
+  // [])
 
 
   return (

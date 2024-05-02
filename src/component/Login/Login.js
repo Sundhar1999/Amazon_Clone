@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { auth } from "../../firebase";
+//import { auth } from "../../firebase";
 
 function Login() {
   let navigate = useNavigate();
@@ -11,24 +11,24 @@ function Login() {
   const login = (e) => {
     e.preventDefault();
 
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then((auth) => {
-          navigate('/')
-      })
+  //   auth
+  //     .signInWithEmailAndPassword(email, password)
+  //     .then((auth) => {
+  //         navigate('/')
+  //     })
 
-      .catch((e) => alert(e.message));
-  };
+  //     .catch((e) => alert(e.message));
+  // };
 
-  const register = (e) => {
-    e.preventDefault();
+  // const register = (e) => {
+  //   e.preventDefault();
 
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((auth) => {
-        navigate('/');
-      })
-      .catch((e) => alert(e.message));
+  //   auth
+  //     .createUserWithEmailAndPassword(email, password)
+  //     .then((auth) => {
+  //       navigate('/');
+  //     })
+  //     .catch((e) => alert(e.message));
   };
 
   return (
@@ -36,7 +36,7 @@ function Login() {
       <Link to="/">
         <img
           className="login_logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+          src="https://cdn.dribbble.com/userupload/10093652/file/original-ca4f833ed735ea013f32bb15bc7bc2d8.png?resize=1024x1024"
         />
       </Link>
 
@@ -64,9 +64,9 @@ function Login() {
           Sale. Please see our Privacy Notice, our Cookies Notice and our
           Interest-Based Ads Notice.
         </p>
-        <button onClick={register} className="login_registerButton">
+        {/* <button onClick={register} className="login_registerButton">
           Create your Amazon Account
-        </button>
+        </button> */}
       </div>
     </div>
   );

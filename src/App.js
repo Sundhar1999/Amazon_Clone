@@ -9,7 +9,7 @@ import { Fragment } from "react";
 import { useStateValue } from "./StateProvider";
 //import { auth } from './firebase';
 
-function App() {
+function App() { 
 
   const [{user}, dispatch] = useStateValue();
 
